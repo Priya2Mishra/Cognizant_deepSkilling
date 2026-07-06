@@ -1,0 +1,73 @@
+
+
+1. Understanding Asymptotic Notation
+What is Big O Notation?
+
+Big O notation is a mathematical way of describing how the running time of an algorithm grows as the input size (n) increases.
+
+It helps us:
+
+Compare algorithms
+Measure efficiency
+Predict performance for large datasets
+
+For example:
+
+Big O	Name	Performance
+O(1)	Constant	Excellent
+O(log n)	Logarithmic	Very Fast
+O(n)	Linear	Good
+O(n log n)	Linearithmic	Efficient
+O(n²)	Quadratic	Slow
+O(2ⁿ)	Exponential	Very Slow
+Best, Average, and Worst Case
+1. Best Case
+
+The element is found immediately.
+
+Example:
+
+Searching for Product ID 101 and it is the first element.
+
+Linear Search:
+
+101 102 103 104
+↑
+Found
+
+Time Complexity:
+
+O(1)
+2. Average Case
+
+The element is somewhere in the middle.
+
+Example:
+
+101 102 103 104 105
+        ↑
+      Found
+
+Linear Search checks about half of the elements.
+
+Time Complexity:
+
+O(n)
+3. Worst Case
+
+The element is at the last position or not present.
+
+Example:
+
+101 102 103 104 105
+                ↑
+              Found
+
+or
+
+Search = 110
+(Not Found)
+
+Time Complexity:
+
+O(n)
