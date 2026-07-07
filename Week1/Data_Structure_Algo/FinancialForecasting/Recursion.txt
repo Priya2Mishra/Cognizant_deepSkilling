@@ -1,0 +1,38 @@
+
+
+
+What is Recursion?
+
+Recursion is a programming technique where a method calls itself to solve a problem.
+
+A recursive function has two parts:
+
+Base Case – stops the recursion.
+Recursive Case – calls itself with a smaller problem.
+Example
+
+Factorial of 5:
+
+5! = 5 × 4!
+4! = 4 × 3!
+3! = 3 × 2!
+2! = 2 × 1!
+1! = 1
+
+The function keeps calling itself until it reaches the base case.
+
+Why use Recursion?
+
+Recursion simplifies problems that can be broken into smaller subproblems.
+
+Advantages:
+
+Cleaner and shorter code.
+Easy to understand for mathematical formulas.
+Useful for trees, graphs, divide-and-conquer algorithms, and financial calculations.
+
+Disadvantages:
+
+More function calls.
+Can consume more memory due to the call stack.
+May be slower than an iterative solution for large inputs.
