@@ -1,0 +1,28 @@
+Exercise 1 - Spring Web Project
+================================
+
+Build command requested by assignment:
+mvn clean package -Dhttp.proxyHost=proxy.cognizant.com -Dhttp.proxyPort=6050 -Dhttps.proxyHost=proxy.cognizant.com -Dhttps.proxyPort=6050 -Dhttp.proxyUser=123456
+
+Verified build result in this environment:
+BUILD SUCCESS. The project compiled, the Spring Boot test context loaded, and the executable
+JAR was created at target/spring-learn-0.0.1-SNAPSHOT.jar.
+
+Expected application output after Maven dependencies are downloaded:
+INFO  ... SpringLearnApplication : Starting SpringLearnApplication main() method.
+INFO  ... SpringLearnApplication : Started SpringLearnApplication in ... seconds
+INFO  ... SpringLearnApplication : SpringLearnApplication started successfully.
+
+Run in Eclipse:
+Import as Existing Maven Project, then Run As > Java Application on SpringLearnApplication.
+
+Key project structure:
+- src/main/java: application source code
+- src/main/resources: application configuration (application.properties)
+- src/test/java: automated tests
+
+@SpringBootApplication combines @Configuration, @EnableAutoConfiguration and @ComponentScan.
+
+pom.xml declares the project identity, Java version, Spring Web, DevTools, test dependencies,
+and the Spring Boot Maven plugin. Eclipse's Maven > Dependency Hierarchy displays the
+transitive dependency tree after Maven resolves the project.

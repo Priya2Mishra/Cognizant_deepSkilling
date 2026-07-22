@@ -1,0 +1,3 @@
+Exercise: React Context API Employee Themes
+Verified: npm install and npm run build completed successfully.
+ThemeContext has default light value; App provides theme and EmployeeCard consumes it with useContext without prop drilling.

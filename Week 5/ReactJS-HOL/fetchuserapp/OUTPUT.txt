@@ -1,0 +1,3 @@
+Exercise: Consume REST API from React
+Getuser uses async componentDidMount() and fetch('https://api.randomuser.me/') to display title, first name and image.
+Includes loading and error states.

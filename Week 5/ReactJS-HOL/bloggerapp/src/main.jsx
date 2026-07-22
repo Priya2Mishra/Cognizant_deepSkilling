@@ -1,0 +1,6 @@
+import React from 'react';import{createRoot}from'react-dom/client';import'./styles.css';
+const books=[{id:1,title:'React in Action',author:'Mark Tielens Thomas'},{id:2,title:'Clean Code',author:'Robert C. Martin'}];
+function BookDetails(){return <section><h2>Book Details</h2>{books.length?books.map(b=><article key={b.id}><b>{b.title}</b><br/>{b.author}</article>):<p>No books available.</p>}</section>};
+function BlogDetails({show}){if(!show)return null;return <section><h2>Blog Details</h2><article><b>Understanding React Components</b><p>Components make UI reusable and maintainable.</p></article></section>};
+function CourseDetails({show}){return <section><h2>Course Details</h2>{show&&<article><b>React Fundamentals</b><p>Learn JSX, state, props and events.</p></article>}</section>};
+function App(){const[showBlog,setShowBlog]=React.useState(true),[showCourse,setShowCourse]=React.useState(true);return <main><h1>Blogger App</h1><button onClick={()=>setShowBlog(!showBlog)}>Toggle Blog</button><button onClick={()=>setShowCourse(!showCourse)}>Toggle Course</button><BookDetails/><BlogDetails show={showBlog}/><CourseDetails show={showCourse}/></main>}createRoot(document.getElementById('root')).render(<App/>);

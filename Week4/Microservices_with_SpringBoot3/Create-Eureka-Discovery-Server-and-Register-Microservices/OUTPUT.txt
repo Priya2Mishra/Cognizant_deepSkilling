@@ -1,0 +1,33 @@
+Exercise: Create Eureka Discovery Server and Register Microservices
+===================================================================
+
+Projects included:
+- eureka-discovery-server: Eureka dashboard at http://localhost:8761
+- account: registers as ACCOUNT-SERVICE on port 8081
+- loan: registers as LOAN-SERVICE on port 8082
+- greet-service: registers as GREET-SERVICE on port 8080 and returns Hello World from GET /greet
+- api-gateway: registers as API-GATEWAY on port 9090, discovers services, and logs every incoming request
+
+Verified build result: all five Maven modules built successfully with Spring Boot 3.4.3
+and Spring Cloud 2024.0.1.
+
+Live verification result:
+- Eureka dashboard: HTTP 200 at http://localhost:8761
+- Registered instances: ACCOUNT-SERVICE, LOAN-SERVICE, GREET-SERVICE, API-GATEWAY
+- Gateway request: GET http://localhost:9090/greet-service/greet -> HTTP 200, Hello World
+- Gateway filter log: Incoming request: GET http://localhost:9090/greet-service/greet
+
+Run order:
+1. Start eureka-discovery-server and open http://localhost:8761. The registry is initially empty.
+2. Start account, loan, greet-service, and api-gateway.
+3. Refresh the Eureka dashboard. ACCOUNT-SERVICE, LOAN-SERVICE, GREET-SERVICE, and API-GATEWAY appear.
+4. Call http://localhost:9090/greet-service/greet.
+
+Expected gateway response:
+Hello World
+
+Expected API gateway log:
+Incoming request: GET http://localhost:9090/greet-service/greet
+
+The global LogFilter runs for every request. Eureka clients use application names as their registry IDs;
+the gateway discovery locator maps the lower-case service name in the URL to the registered service.

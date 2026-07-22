@@ -1,0 +1,13 @@
+Exercise 2: Props and Online Shopping
+======================================
+
+Verified: npm install and npm run build completed successfully.
+
+OnlineShopping is a class component containing five Cart objects. Each Cart has Itemname and Price.
+The component loops over the array with map() and renders an item/price table.
+
+Run: npm install, then npm run dev.
+
+Props are read-only values supplied by a parent to a child. State belongs to a component and can change
+over time using setState. Default props supply a fallback value when a parent does not provide a prop.
+ReactDOM.createRoot(...).render(...) mounts the React component tree in the root DOM element.

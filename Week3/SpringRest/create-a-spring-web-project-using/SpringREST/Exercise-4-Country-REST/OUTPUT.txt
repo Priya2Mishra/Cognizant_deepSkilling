@@ -1,0 +1,29 @@
+Exercise 4 - Country REST Web Service
+======================================
+
+Endpoint: GET http://localhost:8083/country
+Expected response body:
+{
+  "code": "IN",
+  "name": "India"
+}
+
+Live verification result:
+GET http://localhost:8083/country
+Status: 200 OK
+Content-Type: application/json
+Response body: {"code":"IN","name":"India"}
+
+Expected relevant HTTP response headers (browser Network tab or Postman Headers tab):
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+What happens in getCountryIndia():
+1. @RequestMapping routes /country to the controller method.
+2. ClassPathXmlApplicationContext reads country.xml from the runtime classpath.
+3. getBean("country", Country.class) creates/configures Country with IN and India, then returns it.
+4. @RestController causes the returned object to be written as the HTTP response body.
+
+Spring Boot includes Jackson through spring-boot-starter-web. Jackson sees Country's public getters
+and serializes the code and name properties into JSON. Check the browser Developer Tools Network
+tab or the Postman Headers tab to inspect the response headers.

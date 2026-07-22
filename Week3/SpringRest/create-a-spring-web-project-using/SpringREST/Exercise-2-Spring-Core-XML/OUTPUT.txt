@@ -1,0 +1,22 @@
+Exercise 2 - Spring Core: Load Country from XML
+================================================
+
+Configured country: IN - India
+
+Verified build result in this environment: BUILD SUCCESS. The executable JAR was created at
+target/spring-learn-country-0.0.1-SNAPSHOT.jar.
+
+Expected DEBUG output when SpringLearnApplication runs:
+DEBUG ... Country : Inside Country Constructor.
+DEBUG ... Country : Inside setCode(): IN
+DEBUG ... Country : Inside setName(): India
+DEBUG ... SpringLearnApplication : Country : Country{code='IN', name='India'}
+
+How it works:
+- <bean> creates an object managed by Spring; id="country" is its lookup name.
+- class identifies the fully-qualified Country class to instantiate.
+- Each <property> calls its matching setter: name is the property/setter name and value is the argument.
+- ApplicationContext is Spring's container interface for configuration and managed objects.
+- ClassPathXmlApplicationContext loads country.xml from src/main/resources (the classpath).
+- context.getBean("country", Country.class) finds the definition, creates/configures the singleton if needed,
+  injects its properties through setters, and returns it as Country.

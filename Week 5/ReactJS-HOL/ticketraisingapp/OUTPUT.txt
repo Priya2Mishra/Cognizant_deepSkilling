@@ -1,0 +1,3 @@
+Exercise: Controlled Complaint Form
+Verified: npm install and npm run build completed successfully.
+ComplaintRegister uses controlled textbox and textarea state. Submit validates input, generates a TKT reference number, shows it in an alert, then clears the form.

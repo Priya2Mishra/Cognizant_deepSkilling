@@ -1,0 +1,3 @@
+Exercise: React Form Validation
+Name requires 5 characters, email requires @ and ., and password requires 8 characters.
+Validation occurs in handleChange and handleSubmit using controlled inputs.

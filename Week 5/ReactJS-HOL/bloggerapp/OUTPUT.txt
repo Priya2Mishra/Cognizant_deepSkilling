@@ -1,0 +1,3 @@
+Exercise: Conditional Rendering Blogger App
+Verified: npm install and npm run build completed successfully.
+Uses if/return null (Blog), && (Course), ternary/map list rendering (Books), and unique keys.

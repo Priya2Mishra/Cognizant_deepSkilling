@@ -1,0 +1,30 @@
+Exercise 3 - Hello World RESTful Web Service
+=============================================
+
+Endpoint: GET http://localhost:8083/hello
+Expected response body: Hello World!!
+
+Live verification result:
+GET http://localhost:8083/hello
+Status: 200 OK
+Content-Type: text/plain;charset=UTF-8
+Response body: Hello World!!
+
+Expected application log after one request:
+INFO ... HelloController : Start: sayHello() method
+INFO ... HelloController : End: sayHello() method
+
+Both log entries were observed during the live request.
+
+Expected relevant HTTP response headers (browser Network tab or Postman Headers tab):
+HTTP/1.1 200 OK
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 13
+
+Run instructions:
+1. Import this folder into Eclipse as an Existing Maven Project.
+2. Run SpringLearnApplication.
+3. Open http://localhost:8083/hello in Chrome or send a GET request in Postman.
+
+@RestController marks the class as a REST endpoint controller. @GetMapping("/hello") maps
+an HTTP GET request to sayHello(). The returned String is written directly to the HTTP response body.

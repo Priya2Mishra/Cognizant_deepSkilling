@@ -1,0 +1,16 @@
+Exercise 1: React Router Trainer Application
+=============================================
+
+Verified: npm install and npm run build completed successfully.
+
+Routes implemented:
+- / redirects to /home
+- /home displays the Home component
+- /trainers displays linked trainer names
+- /trainers/:id reads the id using useParams and displays trainer details
+
+React Router components used: BrowserRouter, Routes, Route, Link, Navigate and useParams.
+Run: npm install, then npm run dev.
+
+Benefits: Router changes the view without a full page reload, keeps navigation URLs shareable,
+and allows URL parameters such as /trainers/2 to identify application data.

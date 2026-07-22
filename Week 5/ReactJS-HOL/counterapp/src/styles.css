@@ -1,0 +1,1 @@
+body { font-family: Arial, sans-serif; background: #eef3f8; } main { max-width: 430px; margin: 60px auto; padding: 32px; text-align: center; background: white; box-shadow: 0 2px 12px #b8c4d3; } button { margin: 8px; padding: 10px 22px; border: 0; border-radius: 4px; color: white; background: #1261a0; cursor: pointer; } button:last-child { background: #b53737; }

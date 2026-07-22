@@ -1,0 +1,12 @@
+Exercise 3: React State Counter
+===============================
+
+Verified: npm install and npm run build completed successfully.
+
+CountPeople is a class component. Its constructor initializes state with entrycount and exitcount at zero.
+Login calls UpdateEntry(), which increments entrycount. Exit calls UpdateExit(), which increments exitcount.
+
+Run: npm install, then npm run dev.
+
+Expected initial output: People entered: 0, People exited: 0.
+Each Login click increments the first value; each Exit click increments the second value.
